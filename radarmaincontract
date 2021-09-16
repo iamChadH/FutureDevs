@@ -1,3 +1,4 @@
+
 /*
 rADAr - ADA Rewards and More!
 
@@ -354,7 +355,7 @@ contract Ownable is Context {
     }
 }
 
-contract ADArewardstoken is IERC20, Ownable {
+contract rADAr is IERC20, Ownable {
     using Address for address;
     
     address WBNB;
@@ -362,7 +363,7 @@ contract ADArewardstoken is IERC20, Ownable {
     address ZERO = 0x0000000000000000000000000000000000000000;
 
     string constant _name = "rADAr";
-    string constant _symbol = "ADARTT";
+    string constant _symbol = "RADAR";
     uint8 constant _decimals = 9;
 
     uint256 _totalSupply = 1000000000 * (10 ** _decimals); // 1 billion tokens
@@ -411,7 +412,7 @@ contract ADArewardstoken is IERC20, Ownable {
     //uint256 delayADAdistribution = 60 minutes;
     bool public autoADAStream = true;
     uint256 lastStream;
-    uint256 streamPeriod = 2 minutes; //time between collecting rewards
+    uint256 streamPeriod = 12 hours; //time between collecting rewards
     uint256 streamPercent = 20; // 10 was the original
 
     bool public swapEnabled = false;
